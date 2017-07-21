@@ -27,7 +27,7 @@ class MockVolumeService {
   }
 }
 
-describe('Jobs notification service', () => {
+describe('Spare Drive Actions service', () => {
   let spareDriveActionsService: SpareDriveActionsService;
 
   beforeEach(async(() => {
