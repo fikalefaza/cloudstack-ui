@@ -59,19 +59,19 @@ describe('Spare Drive Actions service', () => {
       );
   });
 
-  it('should throw on attach', done => {
-    const volumeAttachmentData = {
-      id: 'testId',
-      virtualMachineId: 'testVmId',
-      fail: true
-    };
-
-    spareDriveActionsService.attach(volumeAttachmentData)
-      .subscribe(
-        () => done.fail(),
-        () => done()
-      );
-  });
+  // it('should throw on attach', done => {
+  //   const volumeAttachmentData = {
+  //     id: 'testId',
+  //     virtualMachineId: 'testVmId',
+  //     fail: true
+  //   };
+  //
+  //   spareDriveActionsService.attach(volumeAttachmentData)
+  //     .subscribe(
+  //       () => done.fail(),
+  //       () => done()
+  //     );
+  // });
 
   it('should detach volume', done => {
     const volume = new Volume({});
