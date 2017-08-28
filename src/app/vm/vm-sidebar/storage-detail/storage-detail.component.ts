@@ -12,6 +12,7 @@ import { Iso, IsoService } from '../../../template/shared';
 import { VirtualMachine } from '../../shared/vm.model';
 import { VmService } from '../../shared/vm.service';
 import { IsoEvent } from './iso.component';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -32,8 +33,15 @@ export class StorageDetailComponent implements OnChanges {
     private notificationService: NotificationService,
     private spareDriveActionService: SpareDriveActionsService,
     private vmService: VmService,
-    private volumeService: VolumeService
+    private volumeService: VolumeService,
+    private activatedRoute: ActivatedRoute
   ) {
+    const params = this.activatedRoute.snapshot.parent.params;
+
+    this.vmService.getWithDetails(params.id).subscribe(
+      vm => {
+        this.vm = vm;
+      });
   }
 
   public ngOnChanges(): void {
