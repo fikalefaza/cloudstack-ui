@@ -2,7 +2,14 @@ import { MdlModule } from '@angular-mdl/core';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MdSelectModule, MdTooltipModule, MdMenuModule, MdButtonModule, MdIconModule, MdTabsModule } from '@angular/material';
+import {
+  MdSelectModule,
+  MdTooltipModule,
+  MdMenuModule,
+  MdButtonModule,
+  MdIconModule,
+  MdTabsModule
+} from '@angular/material';
 import { TranslateModule } from '@ngx-translate/core';
 import { DynamicModule } from 'ng-dynamic-component';
 
@@ -25,6 +32,11 @@ import { TemplateTagsComponent } from './template-tags/template-tags.component';
 import { ClipboardModule } from 'ngx-clipboard/dist';
 import { TemplateFilterListSelectorComponent } from './template-filter-list/template-filter-list-selector.component';
 import { TemplateCreationDialogComponent } from './template-creation/template-creation-dialog.component';
+import { TemplateZonesComponent } from './template-sidebar/zones/template-zones.component';
+import { IsoZonesComponent } from './template-sidebar/zones/iso-zones.component';
+import { TemplateDetailsComponent } from './template-sidebar/details/template-details.component';
+import { IsoDetailsComponent } from './template-sidebar/details/iso-details.component';
+import { IsoTagsComponent } from './template-tags/iso-tags.component';
 
 
 @NgModule({
@@ -58,7 +70,12 @@ import { TemplateCreationDialogComponent } from './template-creation/template-cr
     TemplateFilterListComponent,
     TemplateFilterListSelectorComponent,
     TemplatePageComponent,
-    TemplateTagsComponent
+    TemplateTagsComponent,
+    IsoTagsComponent,
+    TemplateZonesComponent,
+    IsoZonesComponent,
+    TemplateDetailsComponent,
+    IsoDetailsComponent
   ],
   exports: [
     TemplateFilterListSelectorComponent,
@@ -74,4 +91,5 @@ import { TemplateCreationDialogComponent } from './template-creation/template-cr
     TemplateCreationComponent
   ]
 })
-export class TemplateModule { }
+export class TemplateModule {
+}
